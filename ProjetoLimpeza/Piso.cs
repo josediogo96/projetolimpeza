@@ -71,5 +71,22 @@ namespace ProjetoLimpeza
                 Console.WriteLine($"A '{nomeDivisao}' não foi encontrada neste piso");
             }
         }
+
+        // Metodo para marcar uma divisao como suja
+
+        public void MarcarDivisaoComoSuja(string nomeDivisao)
+        {
+            Divisao divisao = GetDivisao(nomeDivisao);
+
+            if (divisao != null)
+            {
+                divisao.MarcarComoSuja();
+            }
+
+            else 
+            {
+                Console.WriteLine($"A '{nomeDivisao}' não foi encontrada neste piso");
+            }
+        }
     }
 }
