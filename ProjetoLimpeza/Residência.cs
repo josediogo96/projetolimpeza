@@ -63,7 +63,7 @@ namespace ProjetoLimpeza
 
 
         // Metodo para obter um piso específico pelo nome
-        public Piso ObterPiso(string nomePiso)
+        public Piso GetPiso(string nomePiso)
         {
             return pisos.Find(piso => piso.Name.Equals(nomePiso, StringComparison.OrdinalIgnoreCase));
         }
@@ -73,7 +73,7 @@ namespace ProjetoLimpeza
 
         public void AdicionarDivisao(string nomePiso, string nomeDivisao, int cleaningtime, int cleaninterval)
         {
-            Piso piso = ObterPiso(nomePiso);
+            Piso piso = GetPiso(nomePiso);
         }
     }
 

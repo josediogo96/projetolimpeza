@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoLimpeza
 {
-    internal class Piso
+    public class Piso
     {
         public string Name { get; private set; }
 
