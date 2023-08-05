@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Re_start-v9\\Projeto Limpeza\\ProjetoLimpeza.App\\ProjetoLimpeza\\ProjetoLimpeza.csproj": {}
+    "C:\\Re_start-v9\\Projeto\\projetolimpeza\\ProjetoLimpeza\\ProjetoLimpeza.csproj": {}
   },
   "projects": {
-    "C:\\Re_start-v9\\Projeto Limpeza\\ProjetoLimpeza.App\\ProjetoLimpeza\\ProjetoLimpeza.csproj": {
+    "C:\\Re_start-v9\\Projeto\\projetolimpeza\\ProjetoLimpeza\\ProjetoLimpeza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Re_start-v9\\Projeto Limpeza\\ProjetoLimpeza.App\\ProjetoLimpeza\\ProjetoLimpeza.csproj",
+        "projectUniqueName": "C:\\Re_start-v9\\Projeto\\projetolimpeza\\ProjetoLimpeza\\ProjetoLimpeza.csproj",
         "projectName": "ProjetoLimpeza",
-        "projectPath": "C:\\Re_start-v9\\Projeto Limpeza\\ProjetoLimpeza.App\\ProjetoLimpeza\\ProjetoLimpeza.csproj",
+        "projectPath": "C:\\Re_start-v9\\Projeto\\projetolimpeza\\ProjetoLimpeza\\ProjetoLimpeza.csproj",
         "packagesPath": "C:\\Users\\jose_\\.nuget\\packages\\",
-        "outputPath": "C:\\Re_start-v9\\Projeto Limpeza\\ProjetoLimpeza.App\\ProjetoLimpeza\\obj\\",
+        "outputPath": "C:\\Re_start-v9\\Projeto\\projetolimpeza\\ProjetoLimpeza\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jose_\\AppData\\Roaming\\NuGet\\NuGet.Config",
