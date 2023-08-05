@@ -74,7 +74,32 @@ namespace ProjetoLimpeza
         public void AdicionarDivisao(string nomePiso, string nomeDivisao, int cleaningtime, int cleaninterval)
         {
             Piso piso = GetPiso(nomePiso);
+            if (piso != null) 
+            {
+                piso.AdicionarDivisao(nomeDivisao, cleaningtime, cleaninterval);
+            }
+            else 
+            {
+                Console.WriteLine($"'{nomePiso}' não encontrado nesta residência");
+            }
         }
+
+        // Metodo para obter todas as divisões de um piso da residência
+        public List<Divisao> GetDivisoes(string nomePiso)
+        {
+            Piso piso = GetPiso(nomePiso);
+            if(piso != null)
+            {
+               return piso.GetDivisoes();
+                
+            }
+            else 
+            {
+                Console.WriteLine($"Piso '{nomePiso}' não encontrado nesta residencia");
+                return new List<Divisao>();
+            }
+        }
+          
     }
 
 
