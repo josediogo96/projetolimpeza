@@ -139,6 +139,11 @@ class Program
             {
                 appLimpeza.GuardarDadosEmFicheiro();
             }
+            else if(input == "0")
+            {
+                Console.WriteLine("A fechar o programa...");
+                return;
+            }
             else
             {
                 Console.WriteLine("Opção Inválida. Tente novamente\n");

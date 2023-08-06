@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
@@ -197,6 +198,18 @@ namespace ProjetoLimpeza
             {
                 Console.WriteLine("Guardar dados em ficheiro");
                 string caminho = @"c:\temp\projetolimpeza.json";
+                List<SerializableResidencia> serializableHomes = new List<SerializableResidencia>();
+
+                foreach (var residencia in residencias)
+                {
+                    serializableHomes.Add(new SerializableResidencia(residencia.Name, residencia.pisos));
+                }
+
+                string jsonData = JsonSerializer.Serialize(serializableHomes, new JsonSerializerOptions{WriteIndented = true});
+
+                File.WriteAllText(caminho, jsonData);
+
+                Console.WriteLine("Dados das residências guardados com sucesso.");
 
             } catch (Exception ex) 
             {

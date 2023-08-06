@@ -1,0 +1,33 @@
+[
+  {
+    "Name": "Home",
+    "Pisos": [
+      {
+        "Name": "Piso 0",
+        "Divisoes": [
+          {
+            "Name": "Sala",
+            "IsDirty": false
+          },
+          {
+            "Name": "Cozinha",
+            "IsDirty": false
+          }
+        ]
+      },
+      {
+        "Name": "Piso 1",
+        "Divisoes": [
+          {
+            "Name": "Quarto",
+            "IsDirty": false
+          },
+          {
+            "Name": "WC",
+            "IsDirty": false
+          }
+        ]
+      }
+    ]
+  }
+]

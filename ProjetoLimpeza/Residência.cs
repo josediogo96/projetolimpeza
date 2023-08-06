@@ -14,7 +14,7 @@ namespace ProjetoLimpeza
     {
         public string Name { get; private set; }
 
-        private List<Piso> pisos;
+        public List<Piso> pisos;
 
         public string Username { get; private set; }
 
