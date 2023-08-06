@@ -99,7 +99,53 @@ namespace ProjetoLimpeza
                 return new List<Divisao>();
             }
         }
-          
+        
+        //Metodo para obter uma divisao especifica pelo nome do piso e o nome da divisao
+        public Divisao GetDivisao(string nomePiso, string nomeDivisao)
+        {
+            Piso piso = GetPiso(nomePiso);
+            if (piso != null)
+            {
+                return piso.GetDivisao(nomeDivisao);
+            }
+            else
+            {
+                Console.WriteLine("Não foi encontrado nenhum piso com esse nome.");
+                return null;
+            }
+            
+        }
+
+        //Metodo para marcar uma divisao como limpa
+        public void MarcarDivisaoComoLimpa(string nomePiso, string nomeDivisao)
+        {
+            Piso piso = GetPiso(nomePiso);
+            if(piso != null)
+            {
+                piso.MarcarDivisaoComoLimpa(nomeDivisao);
+            }
+            else 
+            {
+                Console.WriteLine($"A '{nomeDivisao}' está limpa.");
+            }
+        }
+
+        //Metodo para marcar uma divisao como suja
+
+        public void MarcarDivisaoComoSuja(string nomePiso, string nomeDivisao)
+        {
+            Piso piso = GetPiso(nomePiso);
+            if( piso != null )
+            {
+                piso.MarcarDivisaoComoSuja(nomeDivisao);
+            }
+            else 
+            {
+                Console.WriteLine($"A '{nomeDivisao}' está suja.");
+            }
+        }
+
+        
     }
 
 
