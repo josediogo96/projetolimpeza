@@ -1,0 +1,15 @@
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\bin\Debug\net7.0\ProjetoLimpeza.exe
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\bin\Debug\net7.0\ProjetoLimpeza.deps.json
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\bin\Debug\net7.0\ProjetoLimpeza.runtimeconfig.json
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\bin\Debug\net7.0\ProjetoLimpeza.dll
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\bin\Debug\net7.0\ProjetoLimpeza.pdb
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.csproj.AssemblyReference.cache
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.GeneratedMSBuildEditorConfig.editorconfig
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.AssemblyInfoInputs.cache
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.AssemblyInfo.cs
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.csproj.CoreCompileInputs.cache
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.dll
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\refint\ProjetoLimpeza.dll
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.pdb
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ProjetoLimpeza.genruntimeconfig.cache
+C:\Re_start-v9\Projeto\projetolimpeza\ProjetoLimpeza\obj\Debug\net7.0\ref\ProjetoLimpeza.dll
