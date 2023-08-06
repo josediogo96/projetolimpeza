@@ -145,8 +145,35 @@ namespace ProjetoLimpeza
             }
         }
 
-        
-    }
+        // Metodo para visualizar a estrutura da residencia em formato de arvore
 
+        public void VizualizarEstruturaResidencia()
+        {
+            Console.WriteLine($"{Name}");
+            foreach(var piso in pisos)
+            {
+                Console.WriteLine($"    - Piso {piso.Name}");
+                foreach(var divisao in piso.GetDivisoes())
+                {
+                    Console.WriteLine($"    - {divisao.Name}");
+                }
+            }
+        }
+
+        //Metodo para visualizar o estado de limpeza das divisões da residência
+        public void VizualizarEstadodeLimpeza()
+        {
+            Console.WriteLine($"Estado de limpeza da residencia '{Name}': ");
+            foreach(var piso in pisos)
+            {
+                Console.WriteLine($"    Piso '{piso.Name}'");
+                foreach(var divisao in piso.GetDivisoes())
+                {
+                    string estadoLimpeza = divisao.IsClean ? "Limpa" : "Suja";
+                    Console.WriteLine($" {divisao.Name}: {estadoLimpeza}");
+                }
+            }
+        }
+    }
 
 }

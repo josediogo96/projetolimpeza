@@ -35,5 +35,98 @@ namespace ProjetoLimpeza
         {
             return residencias.Find(resindencia => resindencia.Name.Equals(username, StringComparison.OrdinalIgnoreCase));
         }
+
+        //Metodo para adicionar um piso à residencia de um novo utilizador 
+        public void AdicionarPiso(string nomePiso, string username)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if(residencias != null)
+            {
+                residencia.AdicionarPiso(nomePiso);
+                Console.WriteLine($"Piso '{nomePiso}' adicionado à residência de '{username}' com sucesso");
+            }
+            else 
+            {
+                Console.WriteLine($"Utilizador '{username}' não foi encontrado");
+            }
+        }
+
+        // Metodo para adicionar uma divisão a um piso da residência de utilizador 
+
+        public void AdicionarDivisao(string username, string nomePiso, string nomeDivisao, int cleaningTime, int cleanInterval)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if (residencia != null ) 
+            {
+                residencia.AdicionarDivisao(nomePiso, nomeDivisao, cleaningTime, cleanInterval);
+                Console.WriteLine($"Divisão '{nomeDivisao}' adicionado ao Piso '{nomePiso}' da residência de '{username}' com sucesso ");
+            }
+            else
+            {
+                Console.WriteLine($"Utilizador '{username}' não encontrado");
+            }
+        }
+
+        // Metodo para marcar uma divisão como limpa na residência de um utilizador
+
+        public void MarcarDivisaoComoLimpa(string username, string nomePiso, string nomeDivisao)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if(residencia != null)
+            {
+                residencia.MarcarDivisaoComoLimpa(nomePiso, nomeDivisao);
+                Console.WriteLine($"Divisão '{nomeDivisao}' no piso '{nomePiso}' da residência de '{username}' marcada como limpa.");
+            }
+            else
+            {
+                Console.WriteLine($"Utilizador '{username}' não encontrado");
+            }
+        }
+
+        //Metodo para marcar uma divisao como suja na residencia de um utilizador 
+
+        public void MarcarDivisaoComoSuja(string username, string nomePiso, string nomeDivisao)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if (residencia != null)
+            {
+                residencia.MarcarDivisaoComoSuja(nomePiso, nomeDivisao);
+                Console.WriteLine($"Divisão '{nomeDivisao}' no piso '{nomePiso}' da residência de '{username}' marcada como suja.");
+            }
+            else
+            {
+                Console.WriteLine($"Utilizador '{username}' não encontrado");
+            }
+        }
+
+        //Metodo para visualizar a estrutura da residencia de um utilizador em formato de arvore
+
+        public void VizualizarEstruturaResidencia(string username)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if (residencia != null)
+            {
+                residencia.VizualizarEstruturaResidencia();
+            }
+            else 
+            {
+                Console.WriteLine($"Utilizador '{username}' não encontrado.");
+            }
+        }
+
+        //Metodo para visualizar o estado de limpeza das divisoes da residencia de um utilizador
+
+        public void VisualizarEstadoDeLimpeza(string username)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if(residencia != null)
+            {
+                residencia.VizualizarEstadodeLimpeza();
+            }
+            else 
+            {
+                Console.WriteLine($"Utilizador '{username}' não encontrado.");
+            }
+        }
     }
 }
