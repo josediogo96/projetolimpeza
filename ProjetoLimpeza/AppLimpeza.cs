@@ -189,5 +189,65 @@ namespace ProjetoLimpeza
                 Console.WriteLine($"Utilizador '{username}' não encontrado.");
             }
         }
+
+        public void GuardarDadosEmFicheiro()
+        {
+            try 
+            {
+                Console.WriteLine("Guardar dados em ficheiro");
+                string caminho = @"c:\temp\projetolimpeza.json";
+
+            } catch (Exception ex) 
+            {
+                Console.WriteLine($"Erro ao gravar os dados das residências: {ex.Message}");
+            }
+
+        }
+
+        private class SerializableResidencia
+        {
+            public string Name { get; set; }
+            public List<SerializablePiso> Pisos { get; set; }
+
+            public SerializableResidencia(string name, List<Piso> pisos)
+            {
+                Name = name;
+                Pisos = new List<SerializablePiso>();
+
+                foreach (var piso in pisos)
+                {
+                    Pisos.Add(new SerializablePiso(piso.Name, piso.divisoes));
+                }
+            }
+        }
+
+        private class SerializablePiso
+        {
+            public string Name { get; set; }
+            public List<SerializableDivisao> Divisoes { get; set; }
+
+            public SerializablePiso(string name, List<Divisao> divisoes)
+            {
+                Name = name;
+                Divisoes = new List<SerializableDivisao>();
+
+                foreach (var divisao in divisoes)
+                {
+                    Divisoes.Add(new SerializableDivisao(divisao.Name,divisao.IsDirty));
+                }
+            }
+        }
+
+        private class SerializableDivisao
+        {
+            public string Name { get; set; }
+            public bool IsDirty { get; set; }
+
+            public SerializableDivisao(string name, bool isDirty)
+            {
+                Name = name;
+                IsDirty = isDirty;
+            }
+        }
     }
 }

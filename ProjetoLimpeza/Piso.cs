@@ -11,7 +11,7 @@ namespace ProjetoLimpeza
     {
         public string Name { get; set; }
 
-        private List<Divisao> divisoes;
+        public List<Divisao> divisoes;
 
         public Piso(string name)
         {

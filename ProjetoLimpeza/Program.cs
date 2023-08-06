@@ -137,7 +137,7 @@ class Program
             }
             else if (input == "12")
             {
-                Console.WriteLine("Gravar informação de ficheiro");
+                appLimpeza.GuardarDadosEmFicheiro();
             }
             else
             {
