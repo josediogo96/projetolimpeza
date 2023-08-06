@@ -9,7 +9,7 @@ namespace ProjetoLimpeza
 {
     public class Piso
     {
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         private List<Divisao> divisoes;
 

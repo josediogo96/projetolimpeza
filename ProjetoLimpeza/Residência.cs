@@ -49,6 +49,32 @@ namespace ProjetoLimpeza
             pisos.Add(newPiso);
         }
 
+        //Metodo para Editar Piso
+        public void EditarPiso(string nomePisoAntigo, string nomePisoNovo)
+        {
+            Piso pisoParaEditar = pisos.Find(piso => piso.Name.Equals(nomePisoAntigo, StringComparison.OrdinalIgnoreCase));
+            if (pisoParaEditar != null)
+            {
+                pisoParaEditar.Name = nomePisoNovo;
+            }
+            else
+            {
+                Console.WriteLine($"Piso '{nomePisoAntigo}' não encontrado.");
+            }
+ 
+        }
+
+        //Metodo para apagar um piso
+        public bool ApagarPiso(string nomePiso)
+        {
+            Piso pisoParaApagar = pisos.Find(piso => piso.Name.Equals(nomePiso, StringComparison.OrdinalIgnoreCase));
+            if (pisoParaApagar != null)
+            {
+                pisos.Remove(pisoParaApagar);
+                return true;
+            }
+            return false;
+        }
         // Metodo para obter todos os nomes dos pisos de uma residência
         public List<string> GetPisos()
         {
