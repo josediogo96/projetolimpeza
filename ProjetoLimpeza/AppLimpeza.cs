@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace ProjetoLimpeza
@@ -18,7 +19,8 @@ namespace ProjetoLimpeza
         //Metodo para adicionar um novo utilizador
         public void AdicionarUtilizador(string username,string nomeResidencia)
         {
-            if(residencias.Exists(residencias => residencias.Name.Equals(nomeResidencia, StringComparison.OrdinalIgnoreCase)))
+            
+            if (residencias.Exists(residencia => residencia.Name.Equals(nomeResidencia, StringComparison.OrdinalIgnoreCase)))
             {
                 throw new ArgumentException($"Utilizador '{username}' já existe");
             }
@@ -26,6 +28,7 @@ namespace ProjetoLimpeza
             //Criar uma residência para utilizador 
             Residencia newResidencia = new Residencia(nomeResidencia, username);
             residencias.Add(newResidencia);
+            Console.WriteLine(residencias[0].Name);
 
             Console.WriteLine($"Utilizador '{username}' adicionado com sucesso");
         }
@@ -33,14 +36,16 @@ namespace ProjetoLimpeza
         //Metodo para encontrar um utilizador com base no nome de utilizador
         private Residencia EncontrarUtilizador(string username)
         {
+            
             return residencias.Find(resindencia => resindencia.Name.Equals(username, StringComparison.OrdinalIgnoreCase));
         }
 
         //Metodo para adicionar um piso à residencia de um novo utilizador 
-        public void AdicionarPiso(string nomePiso, string username)
+        public void AdicionarPiso(string username, string nomePiso)
         {
             Residencia residencia = EncontrarUtilizador(username);
-            if(residencias != null)
+            
+            if (residencia != null)
             {
                 residencia.AdicionarPiso(nomePiso);
                 Console.WriteLine($"Piso '{nomePiso}' adicionado à residência de '{username}' com sucesso");
@@ -48,7 +53,7 @@ namespace ProjetoLimpeza
             else 
             {
                 Console.WriteLine($"Utilizador '{username}' não foi encontrado");
-            }
+            } 
         }
 
         // Metodo para adicionar uma divisão a um piso da residência de utilizador 
