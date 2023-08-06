@@ -56,6 +56,34 @@ namespace ProjetoLimpeza
             } 
         }
 
+        //Metodo para editar Piso
+        public void EditarPiso(string username, string nomePisoAntigo, string nomePisoNovo)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if(residencia != null)
+            {
+                residencia.EditarPiso(nomePisoAntigo, nomePisoNovo);
+                Console.WriteLine($"Piso '{nomePisoNovo}' editado com sucesso.");
+            }
+            else 
+            {
+                Console.WriteLine($"Utilizador '{username}' não foi encontrado");
+            }
+        }
+
+        // Metodo para apagar piso
+
+        public bool ApagarPiso(string username, string nomePiso)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if(residencia != null )
+            {
+                residencia.ApagarPiso(nomePiso); 
+                return true;
+            }
+            return false;
+        }
+
         // Metodo para adicionar uma divisão a um piso da residência de utilizador 
 
         public void AdicionarDivisao(string username, string nomePiso, string nomeDivisao, int cleaningTime, int cleanInterval)
@@ -72,6 +100,34 @@ namespace ProjetoLimpeza
             }
         }
 
+        // Metodo para editar uma divisao
+
+        public void EditarDivisao(string username, string nomePiso, string nomeDivisaoAntiga, string nomeDivisaoNova)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if(residencia != null)
+            {
+                residencia.EditarDivisao(nomePiso, nomeDivisaoAntiga, nomeDivisaoNova);
+            }
+            else 
+            {
+                Console.WriteLine($"Divisão '{nomeDivisaoAntiga}' não encontrada");
+            }
+        }
+
+        // Metodo para apagar divisao
+
+        public bool ApagarDivisao(string username, string nomePiso, string nomeDivisao)
+        {
+            Residencia residencia = EncontrarUtilizador(username);
+            if( residencia != null )
+            {
+                residencia.ApagarDivisao(nomePiso, nomeDivisao);
+                return true;
+
+            }
+            return false;
+        }
         // Metodo para marcar uma divisão como limpa na residência de um utilizador
 
         public void MarcarDivisaoComoLimpa(string username, string nomePiso, string nomeDivisao)

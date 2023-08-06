@@ -41,6 +41,35 @@ namespace ProjetoLimpeza
             divisoes.Add(newdivision);
         }
 
+        // Metodo para editar uma divisao
+        public void EditarDivisao(string nomeDivisaoAntiga, string nomeDivisaoNovo)
+        {
+            Divisao divisaoParaEditar = divisoes.Find(divisao => divisao.Name.Equals(nomeDivisaoAntiga, StringComparison.OrdinalIgnoreCase));
+            if(divisaoParaEditar != null)
+            {
+                divisaoParaEditar.Name = nomeDivisaoNovo;
+                Console.WriteLine("Divisão editada com sucesso");
+            }
+            else
+            {
+                Console.WriteLine($"Divisão '{nomeDivisaoAntiga}' não encontrada");
+            }
+
+        }
+
+        // Metodo para apagar uma divisao
+
+        public bool ApagarDivisao(string nomeDivisao)
+        {
+            Divisao apagarDivisao = divisoes.Find(divisao => divisao.Name.Equals(nomeDivisao, StringComparison.OrdinalIgnoreCase));
+            if (apagarDivisao != null)
+            {
+                divisoes.Remove(apagarDivisao);
+                return true;
+            }
+            return false;
+        }
+
         // Metodo para obter todas as divisoes do piso 
 
         public List<Divisao> GetDivisoes()

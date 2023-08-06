@@ -8,19 +8,19 @@ namespace ProjetoLimpeza
 {
     public class Divisao
     {
-        public string Name { get; private set; }
+        public string Name { get;  set; }
 
-        public int CleanTime { get; private set; }
+        public int CleanTime { get; set; }
 
-        public int CleanInterval { get; private set; }  
+        public int CleanInterval { get;  set; }  
 
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
-        public bool IsClean { get; private set; }
+        public bool IsClean { get;  set; }
         
-        public bool IsDirty { get; private set; }
+        public bool IsDirty { get;  set; }
 
-        public DateTime LastCleaningDate { get; private set; }
+        public DateTime LastCleaningDate { get; set; }
 
         public Divisao(string name, int cleaningtime, int cleaninterval)
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -109,6 +110,37 @@ namespace ProjetoLimpeza
                 Console.WriteLine($"'{nomePiso}' não encontrado nesta residência");
             }
         }
+
+        // Metodo para editar divisão
+
+        public void EditarDivisao(string nomePiso, string nomeDivisaoAntiga, string nomeDivisaoNova)
+        {
+            Divisao divisao = GetDivisao(nomePiso, nomeDivisaoAntiga);
+            if (divisao != null) 
+            {
+                divisao.Name = nomeDivisaoNova;
+                Console.WriteLine("Divisão editada com sucesso");
+            }
+            else 
+            {
+                Console.WriteLine($"Divisao '{nomeDivisaoAntiga} não encontrada");
+            }
+        }
+
+        // Metodo para apagar divisão
+
+        public bool ApagarDivisao(string nomePiso, string nomeDivisao)
+        {
+            Piso piso = GetPiso(nomeDivisao);
+            if( piso != null )
+            {
+                piso.ApagarDivisao(nomeDivisao);
+
+                return true;
+            }
+            return false;
+        }
+
 
         // Metodo para obter todas as divisões de um piso da residência
         public List<Divisao> GetDivisoes(string nomePiso)

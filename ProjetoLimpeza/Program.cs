@@ -48,11 +48,22 @@ class Program
             }
             else if (input == "3")
             {
-                Console.WriteLine("Editar Piso:");
+                Console.WriteLine("Username:");
+                string username = Console.ReadLine();
+                Console.WriteLine("Que piso quer editar?");
+                string nomePisoAntigo = Console.ReadLine();
+                Console.WriteLine("Para que nome quer alterar?");
+                string nomePisoNovo = Console.ReadLine();
+                appLimpeza.EditarPiso(username, nomePisoAntigo, nomePisoNovo);
+
             }
             else if (input == "4")
             {
-                Console.WriteLine("Apagar Piso:");
+                Console.WriteLine("Username:");
+                string username = Console.ReadLine();
+                Console.WriteLine("Que piso quer apagar?");
+                string nomePiso = Console.ReadLine();
+                appLimpeza.ApagarPiso(username, nomePiso);
             }
             else if (input == "5")
             {
@@ -70,11 +81,26 @@ class Program
             }
             else if (input == "6")
             {
-                Console.WriteLine("Editar Divisao");
+                Console.WriteLine("Username:");
+                string username = Console.ReadLine();
+                Console.WriteLine("Nome do Piso:");
+                string nomePiso = Console.ReadLine();
+                Console.WriteLine("Que Divisão pretende editar?");
+                string nomeDivisaoAntiga = Console.ReadLine();
+                Console.WriteLine("Para que nome quer editar?");
+                string nomeDivisaoNova = Console.ReadLine();
+                appLimpeza.EditarDivisao(username, nomePiso, nomeDivisaoAntiga, nomeDivisaoNova);
             }
             else if (input == "7")
             {
-                Console.WriteLine("Apagar Divisao");
+                Console.WriteLine("Username:");
+                string username = Console.ReadLine();
+                Console.WriteLine("Nome do Piso:");
+                string nomePiso = Console.ReadLine();
+                Console.WriteLine("Que Divisão pretende apagar?");
+                string nomeDivisao = Console.ReadLine();
+                Console.WriteLine("Para que nome quer editar?");
+                appLimpeza.ApagarDivisao(username, nomePiso, nomeDivisao);
             }
             else if (input == "8")
             {
