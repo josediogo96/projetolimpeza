@@ -28,7 +28,7 @@ namespace ProjetoLimpeza
             //Criar uma residência para utilizador 
             Residencia newResidencia = new Residencia(nomeResidencia, username);
             residencias.Add(newResidencia);
-            Console.WriteLine(residencias[0].Name);
+            
 
             Console.WriteLine($"Utilizador '{username}' adicionado com sucesso");
         }
@@ -37,7 +37,8 @@ namespace ProjetoLimpeza
         private Residencia EncontrarUtilizador(string username)
         {
             
-            return residencias.Find(resindencia => resindencia.Name.Equals(username, StringComparison.OrdinalIgnoreCase));
+           // return residencias.Find(resindencia => resindencia.Name.Equals(username, StringComparison.OrdinalIgnoreCase));
+           return residencias[0];
         }
 
         //Metodo para adicionar um piso à residencia de um novo utilizador 
